@@ -1,19 +1,55 @@
 
-# 🎮 Hangman Game Challenge
+# 📘 Assignment: Hangman Game Challenge
 
-Build the classic word-guessing game using Python strings, loops, and user input.
+## 🎯 Objective
 
-## � What You'll Build
+Build a command-line Hangman game that uses random word selection, loops, and conditionals. By the end of this assignment, you will manage game state, process letter guesses, and determine win or loss outcomes.
 
-Create a Hangman game where players guess letters to reveal a hidden word before running out of attempts.
+## 📝 Tasks
 
-**Skills practiced:** String manipulation, loops, conditionals, random selection
+### 🛠️ Initialize the Game
 
-## ✅ Must Have's
+#### Description
+Set up the starting state of your Hangman program using the provided starter code.
 
-Your game must:
-- Randomly select words from a predefined list
-- Accept letter guesses and show current progress (_ _ _ format)
-- Track incorrect guesses remaining
-- End when word is guessed or attempts exhausted
-- Display win/lose messages
+#### Requirements
+Completed program should:
+
+- Store a predefined list of possible words (at least 5 words).
+- Randomly select one secret word from the list.
+- Initialize variables to track guessed letters, incorrect guesses, and maximum incorrect attempts.
+- Display the current word progress using underscores separated by spaces (example: `_ _ _ _ _`).
+
+### 🛠️ Build the Guessing Loop
+
+#### Description
+Create the main game loop where the player guesses one letter at a time and the game state updates after each guess.
+
+#### Requirements
+Completed program should:
+
+- Prompt the player for a single-letter guess each turn.
+- Validate input so only one alphabetic character is accepted.
+- Reveal all matching positions when the guessed letter is correct.
+- Decrease remaining attempts only when the guess is incorrect.
+- Continue the loop until the word is fully guessed or attempts run out.
+- Example interaction:
+	```text
+	Word: _ _ _ _ _ _
+	Guess a letter: a
+	Correct! Word: _ a _ _ _ a
+	Attempts remaining: 6
+	```
+
+### 🛠️ Finish the Game and Report Results
+
+#### Description
+Handle the end-of-game conditions and provide clear feedback to the player.
+
+#### Requirements
+Completed program should:
+
+- Display a win message when the player guesses the full word.
+- Display a lose message when attempts reach zero.
+- Reveal the secret word when the player loses.
+- End the game immediately after a win or loss condition is reached.
